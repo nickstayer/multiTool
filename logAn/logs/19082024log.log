@@ -1,0 +1,192 @@
+
+19.08.2024 22:07:28: Настройки получены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 22:07:28: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+19.08.2024 22:07:28: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+19.08.2024 22:07:28: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+19.08.2024 22:07:28: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+19.08.2024 22:07:28: Программа запущена с аргументом takeFormsOnly
+
+19.08.2024 22:07:28: Начинаю передачу файлов:
+
+Источник: skb ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+Назначение: flash ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+
+19.08.2024 22:07:28: '>' is an unexpected token. The expected token is '='. Line 23, position 76.
+
+19.08.2024 22:11:34: Настройки получены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 22:11:35: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+19.08.2024 22:11:35: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+19.08.2024 22:11:35: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+19.08.2024 22:11:35: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+19.08.2024 22:11:40: Программа запущена с аргументом takeFormsOnly
+
+19.08.2024 22:12:14: Начинаю передачу файлов:
+
+Источник: skb ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+Назначение: flash ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+
+19.08.2024 22:13:49: '>' is an unexpected token. The expected token is '='. Line 23, position 76.
+
+19.08.2024 22:24:01: Настройки получены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 22:24:05: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+19.08.2024 22:24:05: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+19.08.2024 22:24:05: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+19.08.2024 22:24:05: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+19.08.2024 22:24:10: Программа запущена с аргументом takeFormsOnly
+
+19.08.2024 22:24:52: Начинаю передачу файлов:
+
+Источник: skb ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+Назначение: flash ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+
+19.08.2024 22:46:51: '>' is an unexpected token. The expected token is '='. Line 23, position 76.
+
+19.08.2024 22:54:52: Настройки получены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 22:54:52: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+19.08.2024 22:54:52: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+19.08.2024 22:54:52: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+19.08.2024 22:54:52: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+19.08.2024 22:54:52: Программа запущена с аргументом takeFormsOnly
+
+19.08.2024 22:54:52: Начинаю передачу файлов:
+
+Источник: skb ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+Назначение: flash ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+
+19.08.2024 22:54:52: skb=>flash Перемещен файл Form5_7400000008002101_96480_099f9ec1-6fd6-46ae-84f3-97d5f20e910d.xml
+19.08.2024 22:54:52: skb=>flash Перемещен файл Form5_7400000008002201_6751_81960ed3-3978-4bc4-9529-15eb092b190b.xml
+19.08.2024 22:54:52: skb=>flash Перемещен файл Form5_7400000008002261_24648_49817ed0-94ad-441a-8579-6ecc96ee1619.xml
+19.08.2024 22:54:52: skb=>flash Перемещен файл Form5_7400000008002281_21175_88891644-e333-4f51-96dd-490390656f04.xml
+19.08.2024 22:54:52: skb=>flash Перемещен файл Form5_7400000008005722_21690_885e414a-24c1-4a06-a10b-8a62a75fd14d.xml
+19.08.2024 22:54:52: Обновляю список ид гостиниц в файле C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+19.08.2024 22:54:52: Настройки обновлены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 22:54:52: Передача файлов завершена
+
+
+19.08.2024 22:54:52: Настройки получены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 22:54:52: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+19.08.2024 22:54:52: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+19.08.2024 22:54:52: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+19.08.2024 22:54:52: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+19.08.2024 22:54:52: Программа запущена с аргументом giveResponsesOnly
+
+19.08.2024 22:54:52: Начинаю передачу файлов:
+
+Источник: flash ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+Назначение: skb ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+
+19.08.2024 22:54:52: flash=>skb Перемещен файл response_FORM5_7400000008002101_96480_099F9EC1-6FD6-46AE-84F3-97D5F20E910D.XML
+19.08.2024 22:54:52: flash=>skb Перемещен файл response_FORM5_7400000008002201_6751_81960ED3-3978-4BC4-9529-15EB092B190B.XML
+19.08.2024 22:54:52: flash=>skb Перемещен файл response_FORM5_7400000008002261_24648_49817ED0-94AD-441A-8579-6ECC96EE1619.XML
+19.08.2024 22:54:52: flash=>skb Перемещен файл response_FORM5_7400000008002281_21175_88891644-E333-4F51-96DD-490390656F04.XML
+19.08.2024 22:54:52: flash=>skb Перемещен файл response_FORM5_7400000008005722_21690_885E414A-24C1-4A06-A10B-8A62A75FD14D.XML
+19.08.2024 22:54:52: flash=>skb Перемещен файл response_MigCS_110a4ce0-65d1-42be-a146-df0277b09e82.xml
+19.08.2024 22:54:52: Обновляю список ид гостиниц в файле C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+19.08.2024 22:54:52: Настройки обновлены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 22:54:52: Передача файлов завершена
+
+
+19.08.2024 23:00:12: Настройки получены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 23:00:12: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+19.08.2024 23:00:12: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+19.08.2024 23:00:12: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+19.08.2024 23:00:12: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+19.08.2024 23:00:12: Программа запущена с аргументом takeFormsOnly
+
+19.08.2024 23:00:12: Начинаю передачу файлов:
+
+Источник: skb ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+Назначение: flash ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+
+19.08.2024 23:00:12: skb=>flash Перемещен файл Form5_7400000008002101_96480_099f9ec1-6fd6-46ae-84f3-97d5f20e910d.xml
+19.08.2024 23:00:12: skb=>flash Перемещен файл Form5_7400000008002201_6751_81960ed3-3978-4bc4-9529-15eb092b190b.xml
+19.08.2024 23:00:12: skb=>flash Перемещен файл Form5_7400000008002261_24648_49817ed0-94ad-441a-8579-6ecc96ee1619.xml
+19.08.2024 23:00:12: skb=>flash Перемещен файл Form5_7400000008002281_21175_88891644-e333-4f51-96dd-490390656f04.xml
+19.08.2024 23:00:12: skb=>flash Перемещен файл Form5_7400000008005722_21690_885e414a-24c1-4a06-a10b-8a62a75fd14d.xml
+19.08.2024 23:00:12: Обновляю список ид гостиниц в файле C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+19.08.2024 23:00:12: Настройки обновлены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 23:00:12: Передача файлов завершена
+
+
+19.08.2024 23:00:12: Настройки получены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 23:00:12: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+19.08.2024 23:00:12: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+19.08.2024 23:00:12: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+19.08.2024 23:00:12: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+19.08.2024 23:00:12: Программа запущена с аргументом giveResponsesOnly
+
+19.08.2024 23:00:12: Начинаю передачу файлов:
+
+Источник: flash ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+Назначение: skb ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+
+19.08.2024 23:00:12: flash=>skb Перемещен файл response_FORM5_7400000008002101_96480_099F9EC1-6FD6-46AE-84F3-97D5F20E910D.XML
+19.08.2024 23:00:12: flash=>skb Перемещен файл response_FORM5_7400000008002201_6751_81960ED3-3978-4BC4-9529-15EB092B190B.XML
+19.08.2024 23:00:12: flash=>skb Перемещен файл response_FORM5_7400000008002261_24648_49817ED0-94AD-441A-8579-6ECC96EE1619.XML
+19.08.2024 23:00:12: flash=>skb Перемещен файл response_FORM5_7400000008002281_21175_88891644-E333-4F51-96DD-490390656F04.XML
+19.08.2024 23:00:12: flash=>skb Перемещен файл response_FORM5_7400000008005722_21690_885E414A-24C1-4A06-A10B-8A62A75FD14D.XML
+19.08.2024 23:00:12: flash=>skb Перемещен файл response_MigCS_110a4ce0-65d1-42be-a146-df0277b09e82.xml
+19.08.2024 23:00:12: Обновляю список ид гостиниц в файле C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+19.08.2024 23:00:12: Настройки обновлены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 23:00:12: Передача файлов завершена
+
+
+19.08.2024 23:01:25: Настройки получены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 23:01:25: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+19.08.2024 23:01:25: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+19.08.2024 23:01:25: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+19.08.2024 23:01:25: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+19.08.2024 23:01:25: Программа запущена с аргументом takeFormsOnly
+
+19.08.2024 23:01:25: Начинаю передачу файлов:
+
+Источник: skb ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+Назначение: flash ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+
+19.08.2024 23:01:25: skb=>flash Перемещен файл Form5_7400000008002101_96480_099f9ec1-6fd6-46ae-84f3-97d5f20e910d.xml
+19.08.2024 23:01:25: skb=>flash Перемещен файл Form5_7400000008002201_6751_81960ed3-3978-4bc4-9529-15eb092b190b.xml
+19.08.2024 23:01:25: skb=>flash Перемещен файл Form5_7400000008002261_24648_49817ed0-94ad-441a-8579-6ecc96ee1619.xml
+19.08.2024 23:01:25: skb=>flash Перемещен файл Form5_7400000008002281_21175_88891644-e333-4f51-96dd-490390656f04.xml
+19.08.2024 23:01:25: skb=>flash Перемещен файл Form5_7400000008005722_21690_885e414a-24c1-4a06-a10b-8a62a75fd14d.xml
+19.08.2024 23:01:25: Обновляю список ид гостиниц в файле C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+19.08.2024 23:01:25: Настройки обновлены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 23:01:25: Передача файлов завершена
+
+
+19.08.2024 23:01:25: Настройки получены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 23:01:25: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Inbox\
+19.08.2024 23:01:25: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\inbound\hotel\skb\
+19.08.2024 23:01:25: Путь корректный: ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+19.08.2024 23:01:25: Путь корректный: ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+19.08.2024 23:01:25: Программа запущена с аргументом giveResponsesOnly
+
+19.08.2024 23:01:25: Начинаю передачу файлов:
+
+Источник: flash ..\..\..\Tests\MainTest\files\flash\hotels\outbound\hotel\
+Назначение: skb ..\..\..\Tests\MainTest\files\Kontur\Outbox\
+
+19.08.2024 23:01:25: flash=>skb Перемещен файл response_FORM5_7400000008002101_96480_099F9EC1-6FD6-46AE-84F3-97D5F20E910D.XML
+19.08.2024 23:01:25: flash=>skb Перемещен файл response_FORM5_7400000008002201_6751_81960ED3-3978-4BC4-9529-15EB092B190B.XML
+19.08.2024 23:01:25: flash=>skb Перемещен файл response_FORM5_7400000008002261_24648_49817ED0-94AD-441A-8579-6ECC96EE1619.XML
+19.08.2024 23:01:25: flash=>skb Перемещен файл response_FORM5_7400000008002281_21175_88891644-E333-4F51-96DD-490390656F04.XML
+19.08.2024 23:01:25: flash=>skb Перемещен файл response_FORM5_7400000008005722_21690_885E414A-24C1-4A06-A10B-8A62A75FD14D.XML
+19.08.2024 23:01:25: flash=>skb Перемещен файл response_MigCS_110a4ce0-65d1-42be-a146-df0277b09e82.xml
+19.08.2024 23:01:25: Обновляю список ид гостиниц в файле C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+19.08.2024 23:01:25: Настройки обновлены: C:\Git\HFormLoader\HFormLoader.Tests\Tests\MainTest\settingsSkbTest.json
+
+19.08.2024 23:01:25: Передача файлов завершена
+

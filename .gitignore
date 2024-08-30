@@ -1,0 +1,11 @@
+venv/
+.idea/
+__pycache__/
+build/
+dist/
+*.patch
+*.crl
+*.crt
+*.cer
+*.xlsx
+*.docx
