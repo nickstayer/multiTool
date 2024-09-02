@@ -9,3 +9,5 @@ dist/
 *.cer
 *.xlsx
 *.docx
+in/
+out/
