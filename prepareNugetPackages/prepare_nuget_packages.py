@@ -27,13 +27,12 @@ def move_folder_contents(root_folder, destination_folder):
                     for item in os.listdir(version_path):
                         item_path = os.path.join(version_path, item)
                         destination_item_path = os.path.join(new_folder_path, item)
+
+                        shutil.move(item_path, destination_item_path)
                         
-                        if os.path.isdir(item_path):
-                            shutil.copytree(item_path, destination_item_path)
-                        else:
-                            shutil.copy(item_path, destination_item_path)
+        shutil.rmtree(package_path)
    
-    print("Копирование завершено")
+    print("Работа программы завершена.")
 
 
 if __name__ == "__main__":
