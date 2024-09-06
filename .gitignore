@@ -11,3 +11,4 @@ dist/
 *.docx
 in/
 out/
+packages/
