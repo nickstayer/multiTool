@@ -4,8 +4,6 @@ import xml.etree.ElementTree as ET
 from guest import Guest
 
 
-
-
 def get_current_dir():
     if getattr(sys, 'frozen', False):
         return os.path.dirname(sys.executable)
@@ -13,7 +11,6 @@ def get_current_dir():
         return os.path.dirname(os.path.abspath(__file__))
 
 
-# out_dir = os.path.join(get_current_dir(), "out")
 out_dir = get_current_dir();
 out_file = os.path.join(out_dir, "guests.csv")
 max_lines_count = 1000
