@@ -9,6 +9,7 @@ dist/
 *.cer
 *.xlsx
 *.docx
+*.zip
 in/
 out/
 packages/
