@@ -2,14 +2,13 @@ import pytest
 import sys
 import os
 from guest import Guest
-from xmlParser import date_to_components
-from xmlParser import get_row
-from xmlParser import get_new_file_name
-from xmlParser import get_path
-from xmlParser import write_to_csv
-from xmlParser import out_dir
-from xmlParser import out_file
-from xmlParser import clear_directory
+from utils import date_to_components
+from utils import get_path
+from utils import clear_directory_from_csv_files
+from main import out_dir
+from main import out_file
+from guest import Guest
+from csv_parser import  CsvParser
 
 
 def get_current_dir():
@@ -20,7 +19,9 @@ def get_current_dir():
 
 
 out_dir_test = os.path.join(get_current_dir(), "testdata", "out")
+in_dir_test = os.path.join(get_current_dir(), "testdata", "in")#
 out_file_test = os.path.join(out_dir_test, "guests.csv")
+in_file_test = os.path.join(in_dir_test, "csv_parse_test.csv")
 
 
 @pytest.mark.parametrize("date, expected", [
@@ -43,7 +44,7 @@ def test_get_row(lastName, firstName, middleName, birthDate, supplierInfo, expec
     guest.middleName = middleName
     guest.birthDate = birthDate
     guest.supplierInfo = supplierInfo
-    result = get_row(guest)
+    result = guest.get_row()
     assert result == expected
 
 
@@ -54,7 +55,8 @@ def test_get_row(lastName, firstName, middleName, birthDate, supplierInfo, expec
     (2000, os.path.join(out_dir, "guests_2.csv")),
 ])
 def test_get_new_file_name(counter, expected):
-    result = get_new_file_name(counter, out_file)
+    csv_parser = CsvParser(out_file)
+    result = csv_parser.get_new_file_name(counter, out_file)
     assert result == expected
 
 
@@ -80,8 +82,20 @@ def test_write_to_csv():
     guest1 = Guest("Рафиков", "Римович", "Марс", "27.01.1964", "7400000008002661")
     guest2 = Guest("Люблин", "СЕРГЕЕВИЧ", "Никита", "27.01.1992", "7400000008005302")
     guests = [guest1, guest2]
-    clear_directory(out_dir_test)
-    csv_file = write_to_csv(guests, out_file_test)
+    clear_directory_from_csv_files(out_dir_test)
+    csv_parser = CsvParser(out_file_test)
+    csv_file = csv_parser.write_guests_to_csv(guests, out_file_test)
     with open(csv_file, "r") as file:
         result = len(file.readlines())
     assert result == 2
+
+
+# def test_csv_parser_read():
+#     csv_parser = CsvParser(in_file_test)
+#     dict_list = csv_parser.read_csv()
+#     guests = CsvParser.dict_list_to_guests(dict_list)
+#     csv_parser.write_guests_to_csv(guests, out_file_test)
+#     with open(out_file_test, "r") as file:
+#         result = len(file.readlines())
+#     assert result == 4
+

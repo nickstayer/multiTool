@@ -3,7 +3,7 @@
 
 
 a = Analysis(
-    ['xmlParser.py'],
+    ['main.py'],
     pathex=['.'],
     binaries=[],
     datas=[],
@@ -36,6 +36,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+	distpath = 'C:\\Git\\multiTool\\xmlParser\\dist\\'
 )
-
-distpath = 'C:\\Git\\multiTool\\xmlParser\\dist\\'
