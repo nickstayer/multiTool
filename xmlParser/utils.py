@@ -1,4 +1,5 @@
 import os
+import re
 
 def date_to_components(date: str):
     components = date.split('.')
@@ -11,6 +12,14 @@ def date_to_components(date: str):
         else:
             new_components.append(c)
     return new_components
+
+def convert_date(date_str):
+    if re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
+        year, month, day = date_str.split('-')
+        return f"{day}.{month}.{year}"
+    elif re.match(r'^\d{2}\.\d{2}\.\d{4}$', date_str):
+        return date_str
+    return None
 
 
 def get_path(input: str):
@@ -39,4 +48,20 @@ def clear_directory_from_csv_files(directory_path):
             print(f"Указанный путь '{directory_path}' не является директорией.")
     except Exception as e:
         print(f"Произошла ошибка: {e}")
+
+
+def get_xml_csv_files(path):
+    xml_files, csv_files = [], []
+    for root, _, files in os.walk(path):
+        for file in files:
+            ext = get_lower_file_extension(file)
+            file_path = os.path.join(root, file)
+            if ext == ".xml":
+                xml_files.append(file_path)
+            if ext == ".csv":
+                csv_files.append(file_path)
+    return xml_files, csv_files
+
+
+
 

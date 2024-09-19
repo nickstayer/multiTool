@@ -1,10 +1,11 @@
 import csv
 import os
+import re
 from guest import Guest
 
 
-class CsvParser:
-    max_lines_per_file = 1000
+class CsvHelper:
+    max_lines_per_file = 900
 
     def __init__(self, file_path):
         self.file_path = file_path
@@ -14,7 +15,15 @@ class CsvParser:
         if counter < self.max_lines_per_file:
             return current_file
         elif counter % self.max_lines_per_file == 0:
-            return current_file.replace(".csv", f"_{int(counter / self.max_lines_per_file)}.csv")
+            file_number = int(counter / self.max_lines_per_file) + 1
+            repl = f"_{file_number}.csv"
+            pattern1 = "_\d+.csv"
+            pattern2 = ".csv"
+            what_find = pattern2
+            match = re.search(pattern1, current_file)
+            if match:
+                what_find = pattern1
+            return re.sub(what_find, repl, current_file)
         else:
             return current_file
 
@@ -25,7 +34,7 @@ class CsvParser:
         for guest in guests:
             row = guest.get_row()
             if row:
-                CsvParser.write_str(row, current_file)
+                CsvHelper.write_str(row, current_file)
                 counter += 1
                 new_file = self.get_new_file_name(counter, current_file)
                 current_file = new_file
@@ -78,12 +87,4 @@ class CsvParser:
             mode = "w"
         with open(csv_file, mode) as csvfile:
                 csvfile.write(row)
-
-
-    def dict_list_to_guests(dictionary_list):
-        guests = []
-        for dictionary in dictionary_list:
-            guest = Guest.dict_to_guest(dictionary)
-            guests.append(guest)
-        return guests
 

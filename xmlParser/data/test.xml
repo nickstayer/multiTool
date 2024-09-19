@@ -33,3 +33,9 @@ case.declarant.person.firstName
 case.declarant.person.middleName
 case.declarant.person.birthDate
 case.supplierInfo
+
+
+case.personDataDocument.person.lastName
+case.personDataDocument.person.firstName
+case.personDataDocument.person.birthDate
+case.supplierInfo
