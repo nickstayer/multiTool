@@ -1,5 +1,8 @@
 from utils import date_to_components
 from utils import convert_date
+from logger import NullLogger
+from xml_parser import parse_xml
+from csv_helper import CsvHelper
 
 
 def get_ru_guest(dictionary):
@@ -94,3 +97,54 @@ class Guest:
     def __str__(self):
         return f"{self.lastName} {self.firstName} {self.middleName} {self.birthDate}, {self.supplierInfo}".replace("  ", " ")
     
+    def get_guests_from_xml_files(files, logger = None):
+        logger = logger or NullLogger()
+        guest_list = []
+        file_counter = 0
+        dub_counter = 0
+        fail_counter = 0
+        for file in files:
+            file_counter += 1
+            print(f"{file}")
+            dictionary = parse_xml(file)
+            guest = Guest.dict_to_guest(dictionary)
+            if guest:
+                guest.sourceFile = file
+                if not guest in guest_list:
+                    guest_list.append(guest)
+                else:
+                    in_list_guests = [g for g in guest_list if g == guest]
+                    logger.log(f"Внимание. Попытка добавить гостя:\t{guest}.\tФайл-источник:\t{guest.sourceFile}")
+                    for g in in_list_guests:
+                        dub_counter += 1
+                        logger.log(f"В списке уже есть гость с данными:\t{g}.\tФайл-источник:\t{g.sourceFile}")
+            else:
+                fail_counter += 1
+                logger.log(f"Внимание. Не удалось получить информацию о госте:\t{file}")
+        logger.paragraph()
+        logger.log(f"Обработано xml:\t{file_counter}")
+        logger.log(f"Попыток добавить дубли:\t{dub_counter}")
+        logger.log(f"Не удалось получить информацию:\t{fail_counter}")
+        return guest_list
+    
+    def get_guests_from_csv_files(files, logger = None):
+        logger = logger or NullLogger()
+        guest_list = []
+        file_counter = 0
+        fail_counter = 0
+        for file in files:
+            file_counter += 1
+            print(f"{file}")
+            dict_list = CsvHelper(file).read_csv()
+            guests = Guest.dict_list_to_guests(dict_list)
+            if guests:
+                guest_list.extend(guests)
+            else:
+                fail_counter += 1
+                logger.log(f"Внимание. Не удалось получить информацию о гостях:\t{file}")
+        guest_set = set(guest_list)
+        logger.paragraph()
+        logger.log(f"Обработано csv:\t{file_counter}")
+        logger.log(f"Попыток добавить дубли:\t{len(guest_list) - len(guest_set)}")
+        logger.log(f"Не удалось получить информацию:\t{fail_counter}")
+        return list(guest_set)

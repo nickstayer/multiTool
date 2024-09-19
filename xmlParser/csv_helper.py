@@ -1,7 +1,6 @@
 import csv
 import os
 import re
-from guest import Guest
 
 
 class CsvHelper:

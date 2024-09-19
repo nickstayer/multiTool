@@ -1,5 +1,17 @@
 from datetime import datetime
 import os
+
+
+class NullLogger:
+    def log(self, message):
+        pass
+
+    def chapter(self):
+        pass
+
+    def paragraph(self):
+        pass
+ 
  
 class Logger:
     def __init__(self, log_dir):

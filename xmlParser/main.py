@@ -1,10 +1,8 @@
 import os
 import sys
-from utils import get_xml_csv_files
-from utils import clear_directory_from_csv_files
+import utils
 from guest import Guest
-from csv_parser import CsvHelper
-from xml_parser import parse_xml
+from csv_helper import CsvHelper
 from logger import Logger
 
 
@@ -13,6 +11,7 @@ def get_current_dir():
         return os.path.dirname(sys.executable)
     else:
         return os.path.dirname(os.path.abspath(__file__))
+
 
 current_dir = get_current_dir()
 out_dir = os.path.join(current_dir, "out")
@@ -39,76 +38,26 @@ logger = Logger(log_dir)
 def main():
     print(description)
     while(True):
-        in_dir = input("Путь к папке с xml:")
+        in_dir = utils.get_path(input("Путь к папке с файлами:"))
         if in_dir:
             logger.chapter()
             logger.log(f"Работа запущена. Источник файлов: {in_dir}")
             logger.log(f"Очищаю папку {out_dir}")
-            clear_directory_from_csv_files(out_dir)
-            xml_files, csv_files = get_xml_csv_files(in_dir)
-            guest_list_xml = get_guests_from_xml_files(xml_files)
-            guest_list_csv = get_guests_from_csv_files(csv_files)
+            
+            utils.clear_directory_from_csv_files(out_dir)
+            xml_files, csv_files = utils.get_xml_csv_files(in_dir)
+            guest_list_xml = Guest.get_guests_from_xml_files(xml_files, logger)
+            guest_list_csv = Guest.get_guests_from_csv_files(csv_files, logger)
             csv_helper = CsvHelper(out_file)
             csv_helper.write_guests_to_csv(guest_list_xml, out_file)
             csv_helper.write_guests_to_csv(guest_list_csv, out_file)
         else:
-            logger.log(f"Путь не существует: {in_dir}")
+            logger.log(f"Путь не существует")
+            continue
 
         guests_count = len(guest_list_xml) + len(guest_list_csv)
         logger.log(f"Гостей в файлах:\t{guests_count}")
         logger.log(f"Работа завершена.")
-
-
-def get_guests_from_xml_files(files):
-    guest_list = []
-    file_counter = 0
-    dub_counter = 0
-    fail_counter = 0
-    for file in files:
-        file_counter += 1
-        print(f"{file}")
-        dictionary = parse_xml(file)
-        guest = Guest.dict_to_guest(dictionary)
-        if guest:
-            guest.sourceFile = file
-            if not guest in guest_list:
-                guest_list.append(guest)
-            else:
-                in_list_guests = [g for g in guest_list if g == guest]
-                logger.log(f"Внимание. Попытка добавить гостя:\t{guest}.\tФайл-источник:\t{guest.sourceFile}")
-                for g in in_list_guests:
-                    dub_counter += 1
-                    logger.log(f"В списке уже есть гость с данными:\t{g}.\tФайл-источник:\t{g.sourceFile}")
-        else:
-            fail_counter += 1
-            logger.log(f"Внимание. Не удалось получить информацию о госте:\t{file}")
-    logger.paragraph()
-    logger.log(f"Обработано xml:\t{file_counter}")
-    logger.log(f"Попыток добавить дубли:\t{dub_counter}")
-    logger.log(f"Не удалось получить информацию:\t{fail_counter}")
-    return guest_list
-
-
-def get_guests_from_csv_files(files):
-    guest_list = []
-    file_counter = 0
-    fail_counter = 0
-    for file in files:
-        file_counter += 1
-        print(f"{file}")
-        dict_list = CsvHelper(file).read_csv()
-        guests = Guest.dict_list_to_guests(dict_list)
-        if guests:
-            guest_list.extend(guests)
-        else:
-            fail_counter += 1
-            logger.log(f"Внимание. Не удалось получить информацию о гостях:\t{file}")
-    guest_set = set(guest_list)
-    logger.paragraph()
-    logger.log(f"Обработано csv:\t{file_counter}")
-    logger.log(f"Попыток добавить дубли:\t{len(guest_list) - len(guest_set)}")
-    logger.log(f"Не удалось получить информацию:\t{fail_counter}")
-    return list(guest_set)
 
 
 if __name__ == "__main__":

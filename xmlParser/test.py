@@ -5,7 +5,7 @@ from guest import Guest
 from utils import *
 from main import out_dir
 from main import out_file
-from csv_parser import  CsvHelper
+from xmlParser.csv_helper import  CsvHelper
 
 
 def get_current_dir():
@@ -14,9 +14,9 @@ def get_current_dir():
     else:
         return os.path.dirname(os.path.abspath(__file__))
 
-
-out_dir_test = os.path.join(get_current_dir(), "testdata", "out")
-in_dir_test = os.path.join(get_current_dir(), "testdata", "in")
+test_dir = os.path.join(get_current_dir(), "testdata")
+out_dir_test = os.path.join(test_dir, "out")
+in_dir_test = os.path.join(test_dir, "in")
 out_file_test = os.path.join(out_dir_test, "guests.csv")
 in_file_test = os.path.join(in_dir_test, "csv_parse_test.csv")
 
@@ -111,3 +111,17 @@ def test_get_xml_csv_files():
     xml_list, csv_list = get_xml_csv_files(in_dir_test)
     assert len(csv_list) == 2
     assert len(xml_list) == 14
+
+
+def test_get_guests_from_csv_files():
+    csv_path = os.path.join(test_dir, "csv")
+    xml_files, csv_files = get_xml_csv_files(csv_path)
+    actual = Guest.get_guests_from_csv_files(csv_files)
+    assert len(actual) == 644
+
+
+def test_get_guests_from_xml_files():
+    xml_path = os.path.join(test_dir, "xml")
+    xml_files, csv_files = get_xml_csv_files(xml_path)
+    actual = Guest.get_guests_from_xml_files(xml_files)
+    assert len(actual) == 2
