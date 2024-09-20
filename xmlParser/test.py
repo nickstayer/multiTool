@@ -5,7 +5,7 @@ from guest import Guest
 from utils import *
 from main import out_dir
 from main import out_file
-from xmlParser.csv_helper import  CsvHelper
+from csv_helper import  CsvHelper
 
 
 def get_current_dir():
