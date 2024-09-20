@@ -36,18 +36,19 @@ def get_lower_file_extension(file_name):
 
 
 def clear_directory_from_csv_files(directory_path):
-    try:
-        if os.path.isdir(directory_path):
-            print(f"Очищаю: {directory_path}")
-            for filename in os.listdir(directory_path):
-                file_path = os.path.join(directory_path, filename)
-                if os.path.isfile(file_path):
-                    if get_lower_file_extension(file_path) == ".csv":
-                        os.remove(file_path)
-        else:
-            print(f"Указанный путь '{directory_path}' не является директорией.")
-    except Exception as e:
-        print(f"Произошла ошибка: {e}")
+    if os.path.exists(directory_path):
+        try:
+            if os.path.isdir(directory_path):
+                print(f"Очищаю: {directory_path}")
+                for filename in os.listdir(directory_path):
+                    file_path = os.path.join(directory_path, filename)
+                    if os.path.isfile(file_path):
+                        if get_lower_file_extension(file_path) == ".csv":
+                            os.remove(file_path)
+            else:
+                print(f"Указанный путь '{directory_path}' не является директорией.")
+        except Exception as e:
+            print(f"Произошла ошибка: {e}")
 
 
 def get_xml_csv_files(path):

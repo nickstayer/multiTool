@@ -16,9 +16,9 @@ def get_current_dir():
 
 test_dir = os.path.join(get_current_dir(), "testdata")
 out_dir_test = os.path.join(test_dir, "out")
-in_dir_test = os.path.join(test_dir, "in")
+csv_dir_test = os.path.join(test_dir, "csv")
 out_file_test = os.path.join(out_dir_test, "guests.csv")
-in_file_test = os.path.join(in_dir_test, "csv_parse_test.csv")
+
 
 
 @pytest.mark.parametrize("date, expected", [
@@ -87,8 +87,9 @@ def test_write_to_csv():
 
 
 def test_csv_parser_read():
+    csv_file = os.path.join(csv_dir_test, "test_csv_parser_read.csv")
     clear_directory_from_csv_files(out_dir_test)
-    csv_parser = CsvHelper(in_file_test)
+    csv_parser = CsvHelper(csv_file)
     dict_list = csv_parser.read_csv()
     guests = Guest.dict_list_to_guests(dict_list)
     csv_parser.write_guests_to_csv(guests, out_file_test)
@@ -108,9 +109,10 @@ def test_convert_date(input, expected):
 
 
 def test_get_xml_csv_files():
-    xml_list, csv_list = get_xml_csv_files(in_dir_test)
+    both_format_dir = os.path.join(test_dir, "both_format")
+    xml_list, csv_list = get_xml_csv_files(both_format_dir)
     assert len(csv_list) == 2
-    assert len(xml_list) == 14
+    assert len(xml_list) == 6
 
 
 def test_get_guests_from_csv_files():
