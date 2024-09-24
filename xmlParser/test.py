@@ -30,17 +30,18 @@ def test_date_to_components(date, expected):
     assert actual == expected
 
 
-@pytest.mark.parametrize("lastName, firstName, middleName, birthDate, supplierInfo, expected", [
-    ("Махновец", "Кирилл", "Афонасьевич", "18.09.1991", "7400000008005302", "Махновец;Кирилл;Афонасьевич;1991;9;18;7400000008005302\n"),
-    ("Махновец", "Кирилл", "", "18.09.1991", "7400000008005302", "Махновец;Кирилл;;1991;9;18;7400000008005302\n"),
+@pytest.mark.parametrize("lastName, firstName, middleName, birthDate, supplierInfo, file, expected", [
+    ("Махновец", "Кирилл", "Афонасьевич", "18.09.1991", "7400000008005302", "file.xml", "Махновец;Кирилл;Афонасьевич;1991;9;18;7400000008005302;file.xml\n"),
+    ("Махновец", "Кирилл", "", "18.09.1991", "7400000008005302", "file.xml", "Махновец;Кирилл;;1991;9;18;7400000008005302;file.xml\n"),
 ])
-def test_get_row(lastName, firstName, middleName, birthDate, supplierInfo, expected):
+def test_get_row(lastName, firstName, middleName, birthDate, supplierInfo, file, expected):
     guest = Guest()
     guest.firstName = firstName
     guest.lastName = lastName
     guest.middleName = middleName
     guest.birthDate = birthDate
     guest.supplierInfo = supplierInfo
+    guest.sourceFile = file
     actual = guest.get_row()
     assert actual == expected
 

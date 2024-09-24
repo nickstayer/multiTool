@@ -90,7 +90,7 @@ class Guest:
     def get_row(self):
         date = date_to_components(self.birthDate)
         if date:
-            return f"{self.lastName};{self.firstName};{self.middleName};{date[2]};{date[1]};{date[0]};{self.supplierInfo}\n"
+            return f"{self.lastName};{self.firstName};{self.middleName};{date[2]};{date[1]};{date[0]};{self.supplierInfo};{self.sourceFile}\n"
         return None
     
 
