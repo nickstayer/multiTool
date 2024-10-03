@@ -1,5 +1,6 @@
 import os
 import re
+from transliterator import Transliterator
 
 def date_to_components(date: str):
     components = date.split('.')
@@ -64,5 +65,8 @@ def get_xml_csv_files(path):
     return xml_files, csv_files
 
 
-
+def from_translit_to_ru(input):
+    transliterator = Transliterator()
+    prep_input = transliterator.preprocess_mixed_cyrillic_latin(input)
+    return transliterator.to_cyrillic(prep_input)
 

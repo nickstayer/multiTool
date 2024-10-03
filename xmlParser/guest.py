@@ -147,4 +147,5 @@ class Guest:
         logger.log(f"Обработано csv:\t{file_counter}")
         logger.log(f"Попыток добавить дубли:\t{len(guest_list) - len(guest_set)}")
         logger.log(f"Не удалось получить информацию:\t{fail_counter}")
-        return list(guest_set)
+        result = [guest for guest in list(guest_set) if guest]
+        return result

@@ -128,3 +128,35 @@ def test_get_guests_from_xml_files():
     xml_files, csv_files = get_xml_csv_files(xml_path)
     actual = Guest.get_guests_from_xml_files(xml_files)
     assert len(actual) == 2
+
+
+@pytest.mark.parametrize("input, expected", [
+("RАKHМАNОV", "РАХМАНОВ"),
+("GRUSHIN", "ГРУШИН"),
+("JАSТI", "ДЖАСТИ"),
+("IULDАSНЕVА", "ЮЛДАШЕВА"),
+("Еrgashev", "Ергашев"),
+("РОNОМАRYОV", "ПОНОМАРЁВ"),
+("DJURАYЕVА", "ДЖУРАЕВА"),
+("DZНUSUРОV", "ДЖУСУПОВ"),
+("DАNDYВАYЕVА", "ДАНДЫБАЕВА"),
+("GАLIАSКАRОVА", "ГАЛИАСКАРОВА"),
+("GHAFURZODA", "ГАФУРЗОДА"),
+("IYEMBERDYYEV", "ИЕМБЕРДЫЕВ"),
+("NIКIТYUК", "НИКИТЮК"),
+("NАVОYАN", "НАВОЯН"),
+("QIYOMOVA", "КИЁМОВА"),
+])
+def test_translit_en_ru(input, expected):
+    actual = from_translit_to_ru(input)
+    assert actual == expected
+
+
+@pytest.mark.parametrize("input, expected", [
+("GRUSНIN", "GRUSHIN"),
+("ВАСНАLLI", "BACHALLI"),
+])
+def test_preprocess_mixed_cyrillic_latin(input, expected):
+    transliterator = Transliterator()
+    actual = transliterator.preprocess_mixed_cyrillic_latin(input)
+    assert actual == expected

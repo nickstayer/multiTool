@@ -41,7 +41,7 @@ class CsvHelper:
 
 
     def read_csv(self):
-        """Считывает CSV-файл и возвращает список словарей."""
+        """Считывает CSV-файл в кодировке 'utf-8' и возвращает список словарей."""
         data = []
         try:
             with open(self.file_path, mode='r', encoding='utf-8') as file:
