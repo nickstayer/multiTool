@@ -1,7 +1,0 @@
-{
-    "python.testing.pytestArgs": [
-        "xmlParser/test.py"
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
-}
